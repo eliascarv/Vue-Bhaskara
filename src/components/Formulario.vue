@@ -2,14 +2,14 @@
   <div>
     <form @submit="enviarForm($event)">
       <p>Raízes (x1 e x2) da equação: ax² + bx + c</p>
-      <p>Insira o valor de a:</p>
+      <p>Insira o valor de a (a ≠ 0):</p>
       <input type="number" v-model="a" /><br />
       <p>Insira o valor de b:</p>
       <input type="number" v-model="b" /><br />
       <p>Insira o valor de c:</p>
       <input type="number" v-model="c" /><br />
       <button type="submit">Calcular</button>
-      <p>Resultado:</p>
+      <p>Raízes:</p>
       <p>x1 = {{ x1 }}</p>
       <p>x2 = {{ x2 }}</p>
     </form>
