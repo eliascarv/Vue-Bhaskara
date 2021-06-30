@@ -1,19 +1,17 @@
-# bhaskara
+# Vue-Bhaskara
+Um pequeno site que usa uma API escrita na linguagem Julia para calculo das raízes de uma função do segungo grau.
 
-## Project setup
+## Setup do projeto
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilar o projeto no ambinete de desenvolvimento
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compilar para produção
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
