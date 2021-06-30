@@ -1,5 +1,6 @@
 # Vue-Bhaskara
-Um pequeno site que usa uma API escrita na linguagem Julia para calculo das raízes de uma função do segungo grau.
+Um pequeno web app escrito em VueJS que usa uma API escrita na linguagem Julia para o cálculo das raízes de uma função do segungo grau.
+O código da API Julia se encontra na pasta backend.
 
 ## Setup do projeto
 ```
