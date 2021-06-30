@@ -1,5 +1,5 @@
 # API Bhaskara
-Uma API escrita na linguagem Julia usando os pacotes HTTP.jl e JSON3.jl.
+Uma API escrita na linguagem Julia usando os pacotes HTTP.jl e JSON3.jl. A API recebe como parâmetros um JSON no formato: `{"a":val_a,"b":val_b,"c":val_c}`, sendo que `val_a`, `val_b` e `val_c` devem ter tipo numérico, e restorna outro JSON no formato: `{"x1": raiz1, "x2":raiz2}`, sendo que `raiz1` e `raiz2` são strings pois o formato JSON não suporta números complexos.
 
 ## Setup do projeto
 Para rodar o script da API, primeiramente instale as dependencias ativando o env Julia.
