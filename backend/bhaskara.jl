@@ -24,7 +24,7 @@ end
 
 const ROUTER = Router()
 
-const headers = [
+const HEADERS = [
     "Access-Control-Allow-Origin" => "*",
     "Access-Control-Allow-Headers" => "*",
     "Access-Control-Allow-Methods" => "*",
@@ -37,6 +37,6 @@ serve(Sockets.localhost, 8081) do req::Request
     body = IOBuffer(payload(req))
     response_body = handle(ROUTER, req, JSON3.read(body))
     res = Response(200, JSON3.write(response_body))
-    res.headers = headers
+    res.headers = HEADERS
     return res
 end
