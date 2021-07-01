@@ -36,7 +36,10 @@ export default {
       const b = parseInt(this.b)
       const c = parseInt(this.c)
 
-      fetch('http://192.168.10.79:8081/bhaskara', {
+      this.x1 = "Calculando..."
+      this.x2 = "Calculando..."
+      
+      fetch('http://localhost:8081/bhaskara', {
         method: "POST",
         body: JSON.stringify({a: a, b: b, c: c})
       })
