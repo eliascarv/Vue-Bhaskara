@@ -34,9 +34,9 @@ const HEADERS = [
 @register(ROUTER, "POST", "/bhaskara", calculate)
 
 serve(Sockets.localhost, 8081) do req::Request
-    body = IOBuffer(payload(req))
-    response_body = handle(ROUTER, req, JSON3.read(body))
-    res = Response(200, JSON3.write(response_body))
+    req_body = IOBuffer(payload(req))
+    res_body = handle(ROUTER, req, JSON3.read(req_body))
+    res = Response(200, JSON3.write(res_body))
     res.headers = HEADERS
     return res
 end
