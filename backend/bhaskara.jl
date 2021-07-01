@@ -24,19 +24,16 @@ end
 
 const ROUTER = Router()
 
-const HEADERS = [
-    "Access-Control-Allow-Origin" => "*",
-    "Access-Control-Allow-Headers" => "*",
-    "Access-Control-Allow-Methods" => "*",
-    "Content-Type" => "application/json"
-]
-
 @register(ROUTER, "POST", "/bhaskara", calculate)
 
 serve(Sockets.localhost, 8081) do req::Request
     req_body = IOBuffer(payload(req))
     res_body = handle(ROUTER, req, JSON3.read(req_body))
-    res = Response(200, JSON3.write(res_body))
-    res.headers = HEADERS
-    return res
+    res_headers = [
+        "Access-Control-Allow-Origin" => "*",
+        "Access-Control-Allow-Headers" => "*",
+        "Access-Control-Allow-Methods" => "*",
+        "Content-Type" => "application/json"
+    ]
+    return Response(200, res_headers, body = JSON3.write(res_body))
 end
