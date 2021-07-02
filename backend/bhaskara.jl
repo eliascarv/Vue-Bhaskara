@@ -11,7 +11,7 @@ function bhaskara(a, b, c)
 
     x1 = (-b + √Δ) / 2a
     x2 = (-b - √Δ) / 2a
-    return "$x1", "$x2"
+    return x1, x2
 end
 
 function calculate(req::Request, coef)
@@ -19,7 +19,7 @@ function calculate(req::Request, coef)
     b = coef["b"]
     c = coef["c"]
     x1, x2 = bhaskara(a, b, c)
-    return Dict("x1" => x1, "x2" => x2)
+    return Dict("x1" => "$x1", "x2" => "$x2")
 end
 
 const ROUTER = Router()
