@@ -20,7 +20,7 @@ Para compilar o código do frontend paraum código que seja executável no naveg
 ```
 npm run build
 ```
-### Setup do Backend
+## Setup do Backend
 Primeiro, instale a linguagem de programação Julia no seu PC, após isso, execute o seguinte comando para instalar as dependências da API:
 ```
 npm run backend-install
