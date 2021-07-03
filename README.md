@@ -1,6 +1,6 @@
 # Vue-Bhaskara
 Um pequeno web app escrito em VueJS que usa uma API escrita na linguagem Julia para o cálculo das raízes de uma função do segungo grau.
-O código da API Julia se encontra na pasta backend. Para executar o projeto o NodeJS e a linguagem de programação Julia devem estar instaladas no seu PC.
+O código da API Julia se encontra na pasta backend. Para executar o projeto, o NodeJS e a linguagem de programação Julia devem estar instaladas no seu PC.
 Cabe salientar que os comandos abaixo devem ser executados na pasta principal do projeto.
 
 ## Setup do Frontend
