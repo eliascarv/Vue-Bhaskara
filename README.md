@@ -3,13 +3,13 @@ Um pequeno web app escrito em VueJS que usa uma API escrita na linguagem Julia p
 O código da API Julia se encontra na pasta backend.
 Cabe salientar que os comandos abaixo devem ser executados na pasta principal do projeto.
 
-## Setup do projeto
+## Setup do frontend
 Para instalar as dependências do frontend execute o seguinte comando:
 ```
 npm install
 ```
 
-### Compilar o projeto no ambinete de desenvolvimento
+### Compilar o frontend no ambinete de desenvolvimento
 Para executar o frontend execute o seguinte comando:
 ```
 npm run serve
