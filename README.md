@@ -16,3 +16,13 @@ npm run serve
 ```
 npm run build
 ```
+### Setup do Backend
+Primeiro, instale a linguagem de programação Julia no seu PC, após isso, execute o segunete comando para instalar as dependências:
+```
+npm run backend-install
+```
+### Executando o Backend
+Dentro da pasta do projeto, abra o unovo terminal e execute o comando:
+```
+npm run backend
+```

@@ -98,12 +98,12 @@ button {
   align-self: flex-end;
 }
 
-/* button:hover {
+button:hover {
   background-color: rgba(0, 0, 0, 0.05);
-} */
+}
 
 button:active {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 p {
