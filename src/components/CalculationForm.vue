@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit="enviarForm($event)">
+    <form @submit="calculteBhaskara($event)">
       <p>Raízes (x1 e x2) da equação: ax² + bx + c</p>
       <p>Insira o valor de a (a ≠ 0):</p>
       <input type="number" v-model="a" /><br />
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'Formulario',
+  name: 'CalculationForm',
   data() {
     return {
       a: '',
@@ -29,8 +29,8 @@ export default {
     }
   },
   methods: {
-    enviarForm(evento) {
-      evento.preventDefault()
+    async calculteBhaskara(event) {
+      event.preventDefault()
 
       const a = parseInt(this.a)
       const b = parseInt(this.b)
@@ -39,16 +39,14 @@ export default {
       this.x1 = "Calculando..."
       this.x2 = "Calculando..."
       
-      fetch('http://localhost:8081/bhaskara', {
+      const response = await fetch('http://localhost:8081/bhaskara', {
         method: "POST",
         body: JSON.stringify({a: a, b: b, c: c})
       })
-        .then(response => response.json()) 
-        .then(json => {
-          this.x1 = json.x1 
-          this.x2 = json.x2
-        })
-        .catch(err => console.log(err));
+      const roots = await response.json()
+
+      this.x1 = roots.x1
+      this.x2 = roots.x2
     }
   }
 }

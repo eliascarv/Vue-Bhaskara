@@ -1,17 +1,17 @@
 <template>
   <Header />
-  <Formulario />
+  <CalculationForm />
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import Formulario from './components/Formulario.vue'
+import CalculationForm from './components/CalculationForm.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Formulario
+    CalculationForm
   }
 }
 </script>
