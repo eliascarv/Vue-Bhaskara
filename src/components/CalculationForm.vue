@@ -40,6 +40,8 @@ export default {
       const b = parseInt(this.b);
       const c = parseInt(this.c);
 
+      this.equation = this.showEquation(a, b, c)
+
       this.x1 = "Calculando...";
       this.x2 = "Calculando...";
       
@@ -48,8 +50,6 @@ export default {
         b: b,
         c: c
       }
-
-      this.equation = this.showEquation(a, b, c)
 
       const roots = await MathAPI.bhaskara(data);
 
