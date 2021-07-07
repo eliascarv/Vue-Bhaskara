@@ -103,7 +103,6 @@ form {
 input {
   padding-left: 12px;
   height: 30px;
-  /* width: 490px; */
   margin-top: 5px;
   margin-bottom: 5px;
   border: solid rgba(0, 0, 0, 0.12) 2px;
@@ -115,7 +114,6 @@ input:focus {
 }
 
 button {
-  /* margin-left: 426px; */
   margin-top: 10px;
   border: solid rgba(0, 0, 0, 0.12) 2px;
   background-color: white;
