@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import MathAPI from '../services/MathAPI.js'
+
 export default {
   name: 'CalculationForm',
   data() {
@@ -30,23 +32,25 @@ export default {
   },
   methods: {
     async calculteBhaskara(event) {
-      event.preventDefault()
+      event.preventDefault();
 
-      const a = parseInt(this.a)
-      const b = parseInt(this.b)
-      const c = parseInt(this.c)
+      const a = parseInt(this.a);
+      const b = parseInt(this.b);
+      const c = parseInt(this.c);
 
-      this.x1 = "Calculando..."
-      this.x2 = "Calculando..."
+      this.x1 = "Calculando...";
+      this.x2 = "Calculando...";
       
-      const response = await fetch('http://localhost:8081/bhaskara', {
-        method: "POST",
-        body: JSON.stringify({a: a, b: b, c: c})
-      })
-      const roots = await response.json()
+      const data = {
+        a: a,
+        b: b,
+        c: c
+      }
 
-      this.x1 = roots.x1
-      this.x2 = roots.x2
+      const roots = await MathAPI.bhaskara(data);
+
+      this.x1 = roots.x1;
+      this.x2 = roots.x2;
     }
   }
 }
