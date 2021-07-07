@@ -62,23 +62,38 @@ export default {
     },
 
     showEquation(a, b, c) {
+      const bval = b;
+      const cval = c;
+
       if (a == 1) {
-        a = ''
+        a = "";
       }
 
       if (b < 0) {
-        b = "- " + Math.abs(b)
+        b = "- " + Math.abs(b);
       } else {
-        b = "+ " + b
+        b = "+ " + b;
       }
 
       if (c < 0) {
-        c = "- " + Math.abs(c) 
+        c = "- " + Math.abs(c); 
       } else {
-        c = "+ " + c
+        c = "+ " + c;
       }
 
-      return a + "x² " + b + "x " + c
+      if (bval == 0 && cval == 0) {
+        return a + "x²";
+      }
+
+      if (bval == 0) {
+        return a + "x² " + c;
+      }
+
+      if (cval == 0) {
+        return a + "x² " + b + "x";
+      }
+
+      return a + "x² " + b + "x " + c;
     }
   }
 }
