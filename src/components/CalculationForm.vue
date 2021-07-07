@@ -40,7 +40,7 @@ export default {
       const b = parseInt(this.b);
       const c = parseInt(this.c);
 
-      this.equation = this.showEquation(a, b, c)
+      this.equation = this.showEquation(a, b, c);
 
       this.x1 = "Calculando...";
       this.x2 = "Calculando...";
