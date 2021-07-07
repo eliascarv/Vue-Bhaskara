@@ -9,6 +9,7 @@
       <p>Insira o valor de c:</p>
       <input type="number" v-model="c" /><br />
       <button type="submit">Calcular</button>
+      <p>Equação: {{ equation }} </p>
       <p>Raízes:</p>
       <p>x1 = {{ x1 }}</p>
       <p>x2 = {{ x2 }}</p>
@@ -27,7 +28,8 @@ export default {
       b: '',
       c: '',
       x1: '',
-      x2: ''
+      x2: '',
+      equation: ''
     }
   },
   methods: {
@@ -47,10 +49,36 @@ export default {
         c: c
       }
 
+      this.equation = this.showEquation(a, b, c)
+
       const roots = await MathAPI.bhaskara(data);
 
       this.x1 = roots.x1;
       this.x2 = roots.x2;
+
+      this.a = '';
+      this.b = '';
+      this.c = '';
+    },
+
+    showEquation(a, b, c) {
+      if (a == 1) {
+        a = ''
+      }
+
+      if (b < 0) {
+        b = "- " + Math.abs(b)
+      } else {
+        b = "+ " + b
+      }
+
+      if (c < 0) {
+        c = "- " + Math.abs(c) 
+      } else {
+        c = "+ " + c
+      }
+
+      return a + "x² " + b + "x " + c
     }
   }
 }
