@@ -45,13 +45,7 @@ export default {
       this.x1 = "Calculando...";
       this.x2 = "Calculando...";
       
-      const data = {
-        a: a,
-        b: b,
-        c: c
-      }
-
-      const roots = await mathAPI.bhaskara(data);
+      const roots = await mathAPI.bhaskara(a, b, c);
 
       this.x1 = roots.x1;
       this.x2 = roots.x2;
