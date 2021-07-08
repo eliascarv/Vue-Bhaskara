@@ -30,9 +30,9 @@ println("""\n
   API running at:
   http://localhost:8081/ 
 
-  Rote           Method
+  Route           Method
   =================================
-  /bhaskara      POST
+  /bhaskara       POST
 """)
 
 serve(Sockets.localhost, 8081) do req::Request
