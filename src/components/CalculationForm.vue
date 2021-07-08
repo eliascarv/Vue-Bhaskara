@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import MathAPI from '../services/MathAPI.js'
+import mathAPI from '../services/mathAPI.js'
 
 export default {
   name: 'CalculationForm',
@@ -51,7 +51,7 @@ export default {
         c: c
       }
 
-      const roots = await MathAPI.bhaskara(data);
+      const roots = await mathAPI.bhaskara(data);
 
       this.x1 = roots.x1;
       this.x2 = roots.x2;

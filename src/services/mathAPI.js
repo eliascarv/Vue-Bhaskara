@@ -1,4 +1,4 @@
-const MathAPI = {
+const mathAPI = {
     async bhaskara(data) {
         const response = await fetch('http://localhost:8081/bhaskara', {
             method: "POST",
@@ -9,4 +9,4 @@ const MathAPI = {
     }
 }
 
-export default MathAPI;
+export default mathAPI;
