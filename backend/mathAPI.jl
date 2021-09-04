@@ -36,7 +36,7 @@ println("""\n
 """)
 
 serve(Sockets.localhost, 8081) do req::Request
-    req_body = IOBuffer(payload(req))
+    req_body = payload(req)
     res_body = handle(ROUTER, req, JSON3.read(req_body))
     res_headers = [
         "Access-Control-Allow-Origin" => "*",
