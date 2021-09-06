@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import mathAPI from '../services/mathAPI.js'
+import mathAPI from '/services/mathAPI.js'
 
 export default {
   name: 'CalculationForm',

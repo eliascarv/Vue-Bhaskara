@@ -26,16 +26,19 @@ const ROUTER = Router()
 
 @register(ROUTER, "POST", "/bhaskara", calculate)
 
+# Get local machine ip
+const IP = getipaddr()
+
 println("""\n
   API running at:
-  http://localhost:8081/ 
+  http://$IP:8081/ 
 
   Route           Method
   =================================
   /bhaskara       POST
 """)
 
-serve(Sockets.localhost, 8081) do req::Request
+serve(IP, 8081) do req::Request
     req_body = payload(req)
     res_body = handle(ROUTER, req, JSON3.read(req_body))
     res_headers = [
