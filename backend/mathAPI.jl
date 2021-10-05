@@ -9,9 +9,9 @@ function bhaskara(a, b, c)
 
     Δ < 0 && (Δ = Complex(Δ))
 
-    x1 = (-b + √Δ) / 2a
-    x2 = (-b - √Δ) / 2a
-    return x1, x2
+    x₁ = (-b + √Δ) / 2a
+    x₂ = (-b - √Δ) / 2a
+    return x₁, x₂
 end
 
 function handle_bhaskara(req::Request)
@@ -20,9 +20,9 @@ function handle_bhaskara(req::Request)
     a = coef.a
     b = coef.b
     c = coef.c
-    x1, x2 = bhaskara(a, b, c)
+    x₁, x₂ = bhaskara(a, b, c)
 
-    res_body = Dict("x1" => "$x1", "x2" => "$x2")
+    res_body = Dict("x1" => "$x₁", "x2" => "$x₂")
     res_headers = [
         "Access-Control-Allow-Origin" => "*",
         "Access-Control-Allow-Headers" => "*",
