@@ -15,9 +15,9 @@ function bhaskara(a, b, c)
 end
 
 function calculate(req::Request, coef)
-    a = coef["a"]
-    b = coef["b"]
-    c = coef["c"]
+    a = coef.a
+    b = coef.b
+    c = coef.c
     x1, x2 = bhaskara(a, b, c)
     return Dict("x1" => "$x1", "x2" => "$x2")
 end
